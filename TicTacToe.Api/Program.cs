@@ -37,6 +37,7 @@ builder.Services.AddCors(options =>
         .AllowAnyMethod();
     });
 });
+builder.WebHost.UseUrls("http://localhost:8400");
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
