@@ -1,0 +1,178 @@
+#root {
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 25px;
+  font-size: 36px;
+}
+
+.game-controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+select,
+button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #f3f3f3;
+}
+
+button:disabled,
+select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 10px auto;
+  color: #c62828;
+}
+
+.game-info {
+  min-height: 50px;
+}
+
+.game-info p {
+  margin: 5px;
+}
+
+.game-info h2 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.board {
+  display: grid;
+  width: 330px;
+  height: 330px;
+  margin: 20px auto;
+  gap: 4px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  border: 1px solid #999;
+  border-radius: 2px;
+
+  background: #fafafa;
+  color: #222;
+
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.cell:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.cell:disabled {
+  cursor: default;
+}
+
+.winning-cell {
+  background: #e8f5e9 !important;
+  border-color: #4caf50;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.panel {
+  width: 330px;
+  margin: 20px auto;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.panel ol {
+  text-align: left;
+  padding-left: 25px;
+}
+
+.panel li {
+  margin: 5px 0;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-around;
+}
+
+.scores div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scores span {
+  font-size: 22px;
+}
+
+.app>button {
+  margin-top: 5px;
+}
+
+@media (max-width: 500px) {
+
+  .board,
+  .panel {
+    width: 290px;
+  }
+
+  .board {
+    height: 290px;
+  }
+
+  .cell {
+    font-size: 48px;
+  }
+}

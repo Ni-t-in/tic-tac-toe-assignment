@@ -1,0 +1,19 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+
+# Local SQLite database
+TicTacToe.Api/tictactoe.db*
+
+# Temporary validation output
+temp-api/
+temp-tests/
+
+# Frontend dependencies and build output
+tic-tac-toe-client/node_modules/
+tic-tac-toe-client/dist/
+tic-tac-toe-client/.vite/
